@@ -2,28 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
+.background-image {
+  background-image: url("/images/pizza-background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.pedros-logo {
+  background-color: white;
+  border: 2px solid #ed4b4b;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+
 .page-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 0px;
-  width: 100vw;
-  padding: 0.5rem 1rem;
-  background-color: rgb(220, 220, 220);
-}
-
 .navbar-container {
   display: flex;
-  gap: 1rem;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.navbar-container .icon {
+  background-color: #ed4b4b;
+  border-radius: 50%;
+  padding: 0.8rem;
+}
+.navbar-container .icon:hover {
+  background-color: #ed4343;
 }
 
-.home-container,
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 32vh;
+  color: white;
+  font-weight: bold;
+}
+
 .reviews-container,
 .about-container {
   display: flex;
@@ -31,10 +62,14 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(78, 78, 78);
-  border-bottom: 2px solid white;
-  color: white;
-  scroll-margin-top: 2.5rem;
+  background-color: white;
+  color: #ed4b4b;
+  font-weight: bold;
+}
+
+.reviews-container {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .footer-container {
@@ -42,7 +77,25 @@
   flex-direction: column;
   align-items: center;
   width: 100vw;
+  height: 10vh;
   padding: 0.5rem 1rem;
-  background-color: rgb(0, 0, 0);
+  margin-bottom: 5rem;
+  background-color: rgb(30, 30, 30);
   color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+h2 {
+  font-size: 2.2rem;
+  padding: 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
 }
