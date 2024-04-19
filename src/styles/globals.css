@@ -2,10 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #02aeec;
+}
+
 .background-image {
   background-image: url("/images/pizza-background.png");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,11 +19,11 @@
   z-index: -1;
 }
 
-.pedros-logo {
-  background-color: white;
-  border: 2px solid #ed4b4b;
+.pedros-logo-container {
+  background-color: #02aeec;
+  border: 2px solid #ed018c;
   border-radius: 50%;
-  padding: 0.2rem;
+  padding: 0.8rem;
 }
 
 .page-container {
@@ -31,18 +36,21 @@
   display: flex;
   justify-content: space-around;
   position: fixed;
-  bottom: 0px;
-  width: 100vw;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   padding: 0.5rem 1rem;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #02adeccb;
+  backdrop-filter: blur(5px);
+  z-index: 99;
 }
 .navbar-container .icon {
-  background-color: #ed4b4b;
+  background-color: #ed018c;
   border-radius: 50%;
   padding: 0.8rem;
 }
 .navbar-container .icon:hover {
-  background-color: #ed4343;
+  background-color: #ff0095;
 }
 
 .header-container {
@@ -50,24 +58,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 32vh;
+  text-align: center;
+  min-height: 36vh;
   color: white;
+  font-weight: bold;
+  padding: 0.8rem;
+}
+
+.reviews-container,
+.about-container,
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 50vh;
+  width: 100%;
+  background-color: #02aeec;
   font-weight: bold;
 }
 
 .reviews-container,
-.about-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: white;
-  color: #ed4b4b;
-  font-weight: bold;
-}
-
-.reviews-container {
+.menu-container {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
@@ -76,10 +87,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
-  height: 10vh;
+  width: 100%;
+  min-height: 10vh;
   padding: 0.5rem 1rem;
-  margin-bottom: 5rem;
+  padding-bottom: 8rem;
   background-color: rgb(30, 30, 30);
   color: white;
 }
@@ -90,7 +101,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
+  color: #ed018c;
   padding: 1rem;
 }
 
@@ -98,4 +110,9 @@ h3 {
   font-size: 1.2rem;
   font-weight: normal;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+p,
+a {
+  color: white;
 }
