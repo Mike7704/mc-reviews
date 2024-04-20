@@ -1,7 +1,3 @@
 export default function Footer() {
-  return (
-    <footer className="footer-container">
-      <p>MC Reviews - 2024</p>
-    </footer>
-  );
+  return <footer className="footer-container">&copy; 2024 MC Reviews. All rights reserved.</footer>;
 }

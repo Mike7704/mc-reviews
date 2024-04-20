@@ -8,7 +8,7 @@ const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata = {
   title: "MC Reviews",
-  description: "A pizza review app",
+  description: "A pizza review app.",
 };
 
 export default function RootLayout({ children }) {
@@ -16,9 +16,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={raleway.className} suppressHydrationWarning={true}>
         <Header />
-        {children}
+        <main className="page-container">
+          <div className="page-pizza-overlay" />
+          {children}
+          <Navbar />
+        </main>
         <Footer />
-        <Navbar />
       </body>
     </html>
   );
