@@ -2,7 +2,8 @@ export default function Home() {
   return (
     <>
       <div className="reviews-container">
-        <h2>Popular</h2>
+        <h2>Pizzas</h2>
+        <p>View all pizzas.</p>
       </div>
       <div className="about-container">
         <h2>About</h2>
