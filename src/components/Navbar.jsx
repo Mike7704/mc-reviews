@@ -10,8 +10,8 @@ export default function Navbar() {
       <Link className="icon" href={"/"}>
         <Image src={"/images/icons/home.png"} width={32} height={32} alt={`Home`} />
       </Link>
-      <Link className="icon" href={"/reviews"}>
-        <Image src={"/images/icons/pizza.png"} width={32} height={32} alt={`Reviews`} />
+      <Link className="icon" href={"/pizzas"}>
+        <Image src={"/images/icons/pizza.png"} width={32} height={32} alt={`Pizzas`} />
       </Link>
     </nav>
   );

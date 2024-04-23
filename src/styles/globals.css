@@ -90,16 +90,14 @@
   padding: 1.2rem 0.5rem;
 }
 
-.reviews-container,
-.about-container,
-.menu-container,
-.add-pizza-container {
+.content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
   gap: 1rem;
   width: 100%;
+  overflow-x: hidden;
   font-weight: bold;
   z-index: 1;
 }
@@ -110,6 +108,18 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.instagram {
+  clip-path: inset(0 0 55px 0);
 }
 
 .footer-container {

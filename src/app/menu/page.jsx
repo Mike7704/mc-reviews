@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Menu() {
   return (
     <>
-      <div className="menu-container">
+      <div className="content-container">
         <h2>Menu</h2>
         <p>Browse the Crazy Pedro&apos;s menu below.</p>
         <div>
