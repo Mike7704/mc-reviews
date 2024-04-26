@@ -4,7 +4,6 @@ export default function Menu() {
   return (
     <div className="content-container">
       <h2>Menu</h2>
-      <p>Browse the Crazy Pedro&apos;s menu below.</p>
       <div>
         <Image className="w-full h-auto" src={"/images/food-menu.png"} width={4087} height={3083} alt={`Food menu`} />
         <Image className="w-full h-auto" src={"/images/drinks-menu.png"} width={4087} height={3083} alt={`Drinks menu`} />
