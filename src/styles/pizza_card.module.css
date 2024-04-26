@@ -9,7 +9,7 @@
   padding: 1rem;
   gap: 0.5rem;
   transition: ease 0.5s;
-  min-width: 25rem;
+  min-width: 21rem;
 }
 .card_container:hover {
   background-color: #ff0095;

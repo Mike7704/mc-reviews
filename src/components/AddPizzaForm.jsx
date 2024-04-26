@@ -19,16 +19,16 @@ export default function AddPizzaForm() {
   return (
     <form className="form-container" action={handleAddPizza}>
       <label htmlFor="name">Name</label>
-      <input type="text" id="name" name="name" required></input>
+      <input type="text" id="name" name="name" placeholder="Enter name here" required></input>
 
       <label htmlFor="rating">Rating</label>
-      <input type="number" id="rating" name="rating" step="any" required></input>
+      <input type="number" id="rating" name="rating" step="any" min="0" max="5" required></input>
 
       <label htmlFor="description">Description</label>
-      <textarea id="description" name="description" required></textarea>
+      <textarea id="description" name="description" placeholder="Enter review here" required></textarea>
 
       <label htmlFor="toppings">Toppings</label>
-      <textarea id="toppings" name="toppings" required></textarea>
+      <textarea id="toppings" name="toppings" placeholder="Enter toppings here" required></textarea>
 
       <label htmlFor="image">Image</label>
       <input type="file" id="image" name="image" accept="image/*" required></input>
