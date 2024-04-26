@@ -1,15 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import pizzaCardStyle from "@/styles/pizza_card.module.css";
+import { getImage } from "@/api/cloudinary";
 
-export default function PizzaCard({ pizza }) {
-  let pizzaImageSrc = `/images/pedros-logo.png`;
-  if (pizza.image_url !== null) {
-    pizzaImageSrc = pizza.image_url;
-  }
+export default async function PizzaCard({ pizza }) {
+  // Fetch image from cloudinary
+  const pizzaImageSrc = await getImage(pizza.image_url);
 
   return (
-    <Link className={pizzaCardStyle.card_container} href={`/reviews/${pizza.id}`}>
+    <Link className={pizzaCardStyle.card_container} href={`/pizzas/${pizza.id}`}>
       <div className={pizzaCardStyle.image_container}>
         <Image className={pizzaCardStyle.image} src={pizzaImageSrc} width={185} height={250} alt={`${pizza.name} image`} />
       </div>

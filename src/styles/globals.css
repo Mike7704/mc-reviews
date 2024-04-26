@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 .background-image {
+  background-color: rgb(25, 25, 25);
   background-image: url("/images/pizza-background.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   position: fixed;
   background-attachment: fixed;
   top: 0;

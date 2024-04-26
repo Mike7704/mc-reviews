@@ -1,22 +1,11 @@
-import { sql } from "@vercel/postgres";
+import { fetchPizzas } from "@/utils/utils";
 
-export default async function Review({ params }) {
-  let pizza;
-
-  try {
-    // Fetch all pizza data
-    pizza = (
-      await sql`
-      SELECT * FROM pizza_reviews WHERE id = ${params.id}
-    ;`
-    ).rows[0];
-  } catch (error) {
-    throw new Error("Could not fetch review");
-  }
+export default async function Pizza({ params }) {
+  const pizza = (await fetchPizzas(params.id)).rows[0];
 
   return (
     <>
-      <div className="reviews-container">
+      <div className="content-container">
         <h2>{pizza.name}</h2>
       </div>
     </>
