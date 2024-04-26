@@ -11,7 +11,7 @@ export async function getImage(image_url) {
       defaultImage: `pizzas/default.png`,
     });
   } catch (error) {
-    return `/images/pedros-logo.png`;
+    return `/images/pizza.png`;
   }
 }
 

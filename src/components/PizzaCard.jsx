@@ -14,9 +14,9 @@ export default async function PizzaCard({ pizza }) {
       </div>
       <div className={pizzaCardStyle.text_container}>
         <p className="text-xl">{pizza.name}</p>
+        <p className="text-xl">🍕{pizza.rating}</p>
         <p className="text-sm">{pizza.description}</p>
         <p className="text-sm">Toppings: {pizza.toppings}</p>
-        <p className="text-lg">🍕{pizza.rating}</p>
       </div>
     </Link>
   );

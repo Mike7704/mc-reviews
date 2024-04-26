@@ -22,13 +22,13 @@ export default function AddPizzaForm() {
       <input type="text" id="name" name="name" required></input>
 
       <label htmlFor="rating">Rating</label>
-      <input type="number" id="rating" name="rating" required></input>
+      <input type="number" id="rating" name="rating" step="any" required></input>
 
       <label htmlFor="description">Description</label>
-      <textarea id="description" name="description" placeholder="Write your review here" required></textarea>
+      <textarea id="description" name="description" required></textarea>
 
       <label htmlFor="toppings">Toppings</label>
-      <textarea id="toppings" name="toppings" placeholder="Write toppings here" required></textarea>
+      <textarea id="toppings" name="toppings" required></textarea>
 
       <label htmlFor="image">Image</label>
       <input type="file" id="image" name="image" accept="image/*" required></input>

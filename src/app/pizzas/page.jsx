@@ -14,11 +14,15 @@ export default async function Pizzas() {
     <>
       <div className="content-container">
         <h2>Pizzas</h2>
-        <div className="pizza-cards-container">
-          {pizzas.rows.map((pizza) => (
-            <PizzaCard key={pizza.id} pizza={pizza} />
-          ))}
-        </div>
+        {pizzas.rows.length > 0 ? (
+          <div className="pizza-cards-container">
+            {pizzas.rows.map((pizza) => (
+              <PizzaCard key={pizza.id} pizza={pizza} />
+            ))}
+          </div>
+        ) : (
+          <p className="text-backdrop">No Pizzas Found</p>
+        )}
       </div>
       <div className="content-container">
         <h2>Add A Pizza</h2>
