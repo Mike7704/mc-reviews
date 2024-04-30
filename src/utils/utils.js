@@ -1,6 +1,7 @@
 "use server";
 import { sql } from "@vercel/postgres";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 // Delete pizza from database
 export async function fetchPizzas(pizzaID) {
@@ -32,8 +33,9 @@ export async function addPizza(name, description, toppings, rating, imageID) {
 export async function deletePizza(pizzaID) {
   try {
     await sql`DELETE FROM pizza_reviews WHERE id=${pizzaID}`;
-    revalidatePath(`/pizzas`);
   } catch (error) {
-    throw new Error("Could not delete pizza");
+    throw new Error("Could not delete pizza: ");
+  } finally {
+    redirect(`/pizzas`);
   }
 }

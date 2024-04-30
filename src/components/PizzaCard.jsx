@@ -10,7 +10,7 @@ export default async function PizzaCard({ pizza }) {
   return (
     <Link className={pizzaCardStyle.card_container} href={`/pizzas/${pizza.id}`}>
       <div className={pizzaCardStyle.image_container}>
-        <Image className={pizzaCardStyle.image} src={pizzaImageSrc} width={185} height={250} alt={`${pizza.name} image`} />
+        <Image className={pizzaCardStyle.image} src={pizzaImageSrc} width={256} height={256} alt={`${pizza.name} image`} />
       </div>
       <div className={pizzaCardStyle.text_container}>
         <p className="text-xl">{pizza.name}</p>
