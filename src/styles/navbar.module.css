@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.3rem 1rem;
+  background-color: #02adeccb;
+  backdrop-filter: blur(5px);
+  z-index: 99;
+}
+
+.icon {
+  background-color: #ed018c;
+  border-radius: 50%;
+  padding: 0.8rem;
+  transition: ease 0.5s;
+}
+.icon:hover {
+  background-color: #ff0095;
+}

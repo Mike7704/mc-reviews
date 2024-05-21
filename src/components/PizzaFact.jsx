@@ -24,22 +24,21 @@ export default function PizzaFact() {
     "The annual consumption of pizza in the United States is estimated to be around 3 billion pizzas.",
   ];
 
-  const [currentFact, setCurrentFact] = useState("Fetching Fact...");
-
-  // Run on mount to select random fact
-  useEffect(() => {
-    const randomIndex = Math.floor(Math.random() * pizzaFacts.length);
-    setCurrentFact(pizzaFacts[randomIndex]);
-  }, []);
+  const [currentFact, setCurrentFact] = useState("");
 
   const getRandomFact = () => {
     const randomIndex = Math.floor(Math.random() * pizzaFacts.length);
     setCurrentFact(pizzaFacts[randomIndex]);
   };
 
+  // Run on mount to select random fact
+  useEffect(() => {
+    getRandomFact();
+  }, []);
+
   return (
     <>
-      <p className="text-backdrop">{currentFact}</p>
+      <p className="text-backdrop fact-text">{currentFact}</p>
       <button onClick={getRandomFact}>New Fact</button>
     </>
   );

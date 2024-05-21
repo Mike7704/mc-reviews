@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import pizzaCardStyle from "@/styles/pizza_card.module.css";
 import { getImage } from "@/api/cloudinary";
+import pizzaCardStyle from "@/styles/pizza_card.module.css";
 
 export default async function PizzaCard({ pizza }) {
   // Fetch image from cloudinary
@@ -10,13 +10,18 @@ export default async function PizzaCard({ pizza }) {
   return (
     <Link className={pizzaCardStyle.card_container} href={`/pizzas/${pizza.id}`}>
       <div className={pizzaCardStyle.image_container}>
-        <Image className={pizzaCardStyle.image} src={pizzaImageSrc} width={256} height={256} alt={`${pizza.name} image`} />
+        <Image
+          className={pizzaCardStyle.image}
+          src={pizzaImageSrc}
+          width={256}
+          height={256}
+          alt={`${pizza.name} image`}
+        />
       </div>
       <div className={pizzaCardStyle.text_container}>
-        <p className="text-xl">{pizza.name}</p>
-        <p className="text-xl">🍕{pizza.rating}</p>
-        <p className="text-sm">{pizza.description}</p>
-        <p className="text-sm">Toppings: {pizza.toppings}</p>
+        <h3>{pizza.name}</h3>
+        <p>{pizza.description}</p>
+        <h3>🍕{pizza.rating}</h3>
       </div>
     </Link>
   );

@@ -6,8 +6,8 @@ import crypto from "crypto";
 export async function getImage(image_url) {
   try {
     return getCldImageUrl({
-      width: 512,
-      height: 512,
+      width: 1024,
+      height: 1024,
       src: image_url,
       defaultImage: `pizzas/default.png`,
     });
@@ -25,10 +25,13 @@ export async function uploadImage(image) {
     const formData = new FormData();
     formData.append("file", image);
 
-    const response = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload?upload_preset=${uploadPreset}`, {
-      method: "POST",
-      body: formData,
-    });
+    const response = await fetch(
+      `https://api.cloudinary.com/v1_1/${cloudName}/image/upload?upload_preset=${uploadPreset}`,
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
 
     if (!response.ok) {
       throw new Error("Failed to upload image");

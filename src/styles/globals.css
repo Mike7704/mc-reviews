@@ -2,18 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  overflow-x: hidden;
+}
+
 .background-image {
   background-color: rgb(25, 25, 25);
   background-image: url("/images/pizza-background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  object-fit: cover;
+  background-attachment: scroll;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: -99;
 }
 
@@ -56,31 +59,6 @@
   pointer-events: none;
 }
 
-.navbar-container {
-  display: flex;
-  justify-content: space-around;
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  max-width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0.3rem 1rem;
-  background-color: #02adeccb;
-  backdrop-filter: blur(5px);
-  z-index: 99;
-}
-.navbar-container .icon {
-  background-color: #ed018c;
-  border-radius: 50%;
-  padding: 0.8rem;
-  transition: ease 0.5s;
-}
-.navbar-container .icon:hover {
-  background-color: #ff0095;
-}
-
 .header-container {
   display: flex;
   flex-direction: column;
@@ -115,11 +93,23 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: #ed018b;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+}
+
+.fact-text {
+  min-height: 10rem;
+  min-width: 100%;
+  align-content: center;
 }
 
 .instagram {
   clip-path: inset(0 0 55px 0);
+  overflow: hidden;
 }
 
 .footer-container {
@@ -136,8 +126,9 @@
 .text-backdrop {
   background-color: #ed018b;
   color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   width: fit-content;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   align-self: center;
   border-radius: 15px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -164,15 +155,9 @@ h3 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
 }
 
-p,
-a {
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
 label {
   font-size: 1.6rem;
-  color: #ed018c;
+  color: #ffffff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -192,6 +177,7 @@ button,
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   width: fit-content;
+  min-width: 10rem;
   padding: 0.5rem 1rem;
   align-self: center;
   border-radius: 15px;
