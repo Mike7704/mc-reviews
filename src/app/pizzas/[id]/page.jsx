@@ -17,9 +17,11 @@ export default async function Pizza({ params }) {
     <>
       <div className="content-container">
         <h2>{pizza.name}</h2>
-        <p>{pizza.description}</p>
-        <p>Toppings: {pizza.toppings}</p>
-        <p>🍕{pizza.rating}</p>
+        <div className="text-backdrop">
+          <p>🍕{pizza.rating}</p>
+          <p>{pizza.description}</p>
+          <p>Toppings: {pizza.toppings}</p>
+        </div>
         <Image className="self-center" src={pizzaImageSrc} width={512} height={512} alt={`${pizza.name} image`} />
         <button>Edit</button>
         <DeleteButton pizzaID={pizza.id} imageID={pizza.image_url} />
