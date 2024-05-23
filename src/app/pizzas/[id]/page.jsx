@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache";
 import Image from "next/image";
 import AnimateIn from "@/components/AnimateIn";
 import { notFound } from "next/navigation";
@@ -11,6 +12,9 @@ export default async function Pizza({ params }) {
   if (!pizza) {
     notFound();
   }
+
+  // Make sure recent data is displayed on page load
+  revalidatePath(`/pizzas/${params.id}`);
 
   // Fetch image from cloudinary
   const pizzaImageSrc = await getImage(pizza.image_url);
