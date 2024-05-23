@@ -98,7 +98,7 @@ body {
 }
 
 .text-backdrop {
-  background: linear-gradient(45deg, #ed018c, rgb(255, 88, 88));
+  background: linear-gradient(45deg, #ed018c, rgb(255, 88, 116));
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   width: fit-content;
@@ -147,7 +147,7 @@ select {
 
 button,
 .button {
-  background: linear-gradient(45deg, #ed018c, rgb(255, 88, 88));
+  background: linear-gradient(45deg, #ed018c, rgb(255, 88, 116));
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   width: fit-content;
