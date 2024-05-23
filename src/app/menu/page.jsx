@@ -3,7 +3,7 @@ import menuStyle from "@/styles/menu.module.css";
 
 export default function Menu() {
   return (
-    <div className="content-container">
+    <div className="content-container top-padding">
       <h2 className="subheading">Menu</h2>
       <div>
         <Image

@@ -16,14 +16,18 @@ export default async function Pizza({ params }) {
 
   return (
     <>
-      <div className="content-container">
+      <div className="content-container top-padding">
         <h2 className={pizzaStyle.name}>{pizza.name}</h2>
         <div className={`text-backdrop ${pizzaStyle.text_container}`}>
           <p className={pizzaStyle.rating}>🍕{pizza.rating}</p>
-          <label>Description</label>
-          <p className={pizzaStyle.text}>{pizza.description}</p>
-          <label>Toppings</label>
-          <p className={pizzaStyle.text}>{pizza.toppings}</p>
+          <div>
+            <label>Description</label>
+            <p className={pizzaStyle.text}>{pizza.description}</p>
+          </div>
+          <div>
+            <label>Toppings</label>
+            <p className={pizzaStyle.text}>{pizza.toppings}</p>
+          </div>
           <Image
             className={pizzaStyle.image}
             src={pizzaImageSrc}
@@ -32,7 +36,7 @@ export default async function Pizza({ params }) {
             alt={`${pizza.name} image`}
           />
         </div>
-        <EditPizza pizza={pizza} />
+        {pizza.id !== 26 && pizza.id !== 76 ? <EditPizza pizza={pizza} /> : <button>Can&apos;t Edit, Sorry 😉</button>}
       </div>
     </>
   );

@@ -75,11 +75,15 @@ body {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  padding-top: 0;
   gap: 1rem;
   width: 100%;
   overflow-x: hidden;
   font-weight: bold;
   z-index: 1;
+}
+.top-padding {
+  padding-top: 1rem;
 }
 
 .footer-container {

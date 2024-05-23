@@ -10,7 +10,7 @@ export default async function Home() {
 
   return (
     <>
-      <div className="content-container">
+      <div className="content-container top-padding">
         <h2 className="subheading">Welcome Pizza Lover!</h2>
         <div className="text-backdrop">
           <p>

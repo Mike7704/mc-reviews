@@ -13,7 +13,7 @@ export default async function Pizzas() {
 
   return (
     <>
-      <div className="content-container">
+      <div className="content-container top-padding">
         <h2 className="subheading">Pizzas</h2>
         {pizzas.rows.length > 0 ? (
           <div className={homeStyle.pizza_cards_container}>

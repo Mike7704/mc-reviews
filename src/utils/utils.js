@@ -37,7 +37,7 @@ export async function updatePizza(pizzaID, newName, newDesc, newTop, newRating) 
   try {
     await sql`UPDATE pizza_reviews 
       SET name = ${newName}, description = ${newDesc}, toppings = ${newTop}, rating = ${newRating}
-      WHERE WHERE id=${pizzaID}
+      WHERE id=${pizzaID}
     `;
     revalidatePath(`/pizzas/${pizzaID}`);
   } catch (error) {
