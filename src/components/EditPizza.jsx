@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+//import PizzaForm from "@/components/PizzaForm";
 import DeleteButton from "@/components/DeleteButton";
 
 export default function EditPizza({ pizza }) {
@@ -9,6 +10,8 @@ export default function EditPizza({ pizza }) {
     <>
       {showForm ? (
         <>
+          {/*<h2 className="subheading">Edit Review</h2>
+          <PizzaForm />*/}
           <button onClick={() => setShowForm(false)}>Close</button>
           <DeleteButton pizzaID={pizza.id} imageID={pizza.image_url} />
         </>

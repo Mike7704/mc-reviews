@@ -1,14 +1,12 @@
-"use client";
 import homeStyle from "@/styles/home.module.css";
 
-export default function EditPizza() {
+export default function Instagram() {
   return (
-    <>
-      <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <div className={homeStyle.instagram}>
       <div
-        className={`elfsight-app-b0a80f14-9511-476a-b8ab-114aa10a7984 ${homeStyle.instagram}`}
+        className={`elfsight-app-43c1c4a5-4471-42b7-9784-bab722522ce6 ${homeStyle.instagram}`}
         data-elfsight-app-lazy
-      />
-    </>
+      ></div>
+    </div>
   );
 }

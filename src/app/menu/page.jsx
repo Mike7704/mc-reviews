@@ -14,6 +14,7 @@ export default function Menu() {
             width={4087}
             height={3083}
             alt={`Food menu`}
+            priority
           />
           <Image
             className={menuStyle.menu_image}

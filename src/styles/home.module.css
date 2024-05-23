@@ -12,9 +12,9 @@
 }
 
 .instagram {
-  border-radius: 15px;
   clip-path: inset(0 0 55px 0);
   overflow: hidden;
+  border-radius: 15px;
 }
 
 @media (min-width: 850px) {

@@ -1,6 +1,7 @@
 .menu_image {
   width: 100%;
   height: auto;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 .menu_image:first-child {
   border-radius: 15px 15px 0px 0px;

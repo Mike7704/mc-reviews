@@ -1,5 +1,6 @@
 import { Raleway } from "next/font/google";
 import "@/styles/globals.css";
+import Script from "next/script";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
       </body>
+      <Script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></Script>
     </html>
   );
 }
