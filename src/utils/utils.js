@@ -3,7 +3,7 @@ import { sql } from "@vercel/postgres";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
-// Delete pizza from database
+// Fetch pizza from database
 export async function fetchPizzas(pizzaID) {
   try {
     if (pizzaID) {
@@ -22,10 +22,26 @@ export async function fetchPizzas(pizzaID) {
 // Add pizza to database
 export async function addPizza(name, description, toppings, rating, imageID) {
   try {
-    await sql`INSERT INTO pizza_reviews (name, description, toppings, rating, image_url) VALUES (${name}, ${description}, ${toppings}, ${rating}, ${imageID})`;
+    await sql`INSERT INTO pizza_reviews
+      (name, description, toppings, rating, image_url)
+      VALUES (${name}, ${description}, ${toppings}, ${rating}, ${imageID}
+    )`;
     revalidatePath(`/pizzas`);
   } catch (error) {
     throw new Error("Could not add pizza");
+  }
+}
+
+// Update pizza in database
+export async function updatePizza(pizzaID, newName, newDesc, newTop, newRating) {
+  try {
+    await sql`UPDATE pizza_reviews 
+      SET name = ${newName}, description = ${newDesc}, toppings = ${newTop}, rating = ${newRating}
+      WHERE WHERE id=${pizzaID}
+    `;
+    revalidatePath(`/pizzas/${pizzaID}`);
+  } catch (error) {
+    throw new Error("Could not update pizza");
   }
 }
 

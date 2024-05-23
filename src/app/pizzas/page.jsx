@@ -1,7 +1,8 @@
 import { revalidatePath } from "next/cache";
 import PizzaCard from "@/components/PizzaCard";
-import AddPizzaForm from "@/components/AddPizzaForm";
+import PizzaForm from "@/components/PizzaForm";
 import { fetchPizzas } from "@/utils/utils";
+import homeStyle from "@/styles/home.module.css";
 
 export default async function Pizzas() {
   // Fetch all pizzas from database
@@ -13,9 +14,9 @@ export default async function Pizzas() {
   return (
     <>
       <div className="content-container">
-        <h2>Pizzas</h2>
+        <h2 className="subheading">Pizzas</h2>
         {pizzas.rows.length > 0 ? (
-          <div className="pizza-cards-container">
+          <div className={homeStyle.pizza_cards_container}>
             {pizzas.rows.map((pizza) => (
               <PizzaCard key={pizza.id} pizza={pizza} />
             ))}
@@ -25,8 +26,8 @@ export default async function Pizzas() {
         )}
       </div>
       <div className="content-container">
-        <h2>Add A Pizza</h2>
-        <AddPizzaForm />
+        <h2 className="subheading">Add A Pizza</h2>
+        <PizzaForm />
       </div>
     </>
   );

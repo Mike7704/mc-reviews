@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import homeStyle from "@/styles/home.module.css";
 
 export default function PizzaFact() {
   const pizzaFacts = [
@@ -38,7 +39,7 @@ export default function PizzaFact() {
 
   return (
     <>
-      <p className="text-backdrop fact-text">{currentFact}</p>
+      <p className={`text-backdrop ${homeStyle.fact_text}`}>{currentFact}</p>
       <button onClick={getRandomFact}>New Fact</button>
     </>
   );

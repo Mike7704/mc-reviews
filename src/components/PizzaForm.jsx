@@ -1,8 +1,9 @@
 import FormSubmitButton from "@/components/FormSubmitButton";
 import { addPizza } from "@/utils/utils";
 import { uploadImage } from "@/api/cloudinary";
+import formStyle from "@/styles/form.module.css";
 
-export default function AddPizzaForm() {
+export default function PizzaForm() {
   async function handleAddPizza(formData) {
     "use server";
     // Get pizza data from form
@@ -17,8 +18,8 @@ export default function AddPizzaForm() {
   }
 
   return (
-    <form action={handleAddPizza}>
-      <div className="form-container">
+    <form className={formStyle.form_container} action={handleAddPizza}>
+      <div className={formStyle.input_container}>
         <label htmlFor="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Enter name here" required></input>
 

@@ -1,0 +1,24 @@
+.pizza_cards_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.fact_text {
+  min-height: 11rem;
+  min-width: 100%;
+  align-content: center;
+}
+
+.instagram {
+  border-radius: 15px;
+  clip-path: inset(0 0 55px 0);
+  overflow: hidden;
+}
+
+@media (min-width: 850px) {
+  .fact_text {
+    min-height: 6rem;
+  }
+}
