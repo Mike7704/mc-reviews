@@ -1,6 +1,8 @@
 import Link from "next/link";
+import AnimateIn from "@/components/AnimateIn";
 import PizzaFact from "@/components/PizzaFact";
 import PizzaCard from "@/components/PizzaCard";
+import Instagram from "@/components/Instagram";
 import { fetchPizzas } from "@/utils/utils";
 import homeStyle from "@/styles/home.module.css";
 
@@ -9,7 +11,7 @@ export default async function Home() {
   const pizzas = await fetchPizzas();
 
   return (
-    <>
+    <AnimateIn>
       <div className="content-container top-padding">
         <h2 className="subheading">Welcome Pizza Lover!</h2>
         <div className="text-backdrop">
@@ -49,12 +51,8 @@ export default async function Home() {
 
       <div className="content-container">
         <h2 className="subheading">Instagram</h2>
-        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-        <div
-          className={`elfsight-app-b0a80f14-9511-476a-b8ab-114aa10a7984 ${homeStyle.instagram}`}
-          data-elfsight-app-lazy
-        />
+        <Instagram />
       </div>
-    </>
+    </AnimateIn>
   );
 }

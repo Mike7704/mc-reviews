@@ -1,4 +1,5 @@
 import { revalidatePath } from "next/cache";
+import AnimateIn from "@/components/AnimateIn";
 import PizzaCard from "@/components/PizzaCard";
 import PizzaForm from "@/components/PizzaForm";
 import { fetchPizzas } from "@/utils/utils";
@@ -12,7 +13,7 @@ export default async function Pizzas() {
   revalidatePath(`/pizzas`);
 
   return (
-    <>
+    <AnimateIn>
       <div className="content-container top-padding">
         <h2 className="subheading">Pizzas</h2>
         {pizzas.rows.length > 0 ? (
@@ -29,6 +30,6 @@ export default async function Pizzas() {
         <h2 className="subheading">Add A Pizza</h2>
         <PizzaForm />
       </div>
-    </>
+    </AnimateIn>
   );
 }
