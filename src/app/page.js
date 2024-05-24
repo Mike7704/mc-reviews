@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AnimateIn from "@/components/AnimateIn";
+import AnimatePage from "@/components/AnimatePage";
 import PizzaFact from "@/components/PizzaFact";
 import PizzaCard from "@/components/PizzaCard";
 import Instagram from "@/components/Instagram";
@@ -11,7 +11,7 @@ export default async function Home() {
   const pizzas = await fetchPizzas();
 
   return (
-    <AnimateIn>
+    <AnimatePage>
       <div className="content-container top-padding">
         <h2 className="subheading">Welcome Pizza Lover!</h2>
         <div className="text-backdrop">
@@ -54,6 +54,6 @@ export default async function Home() {
         <h2 className="subheading">Instagram</h2>
         <Instagram />
       </div>
-    </AnimateIn>
+    </AnimatePage>
   );
 }

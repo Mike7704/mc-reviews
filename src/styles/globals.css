@@ -8,7 +8,7 @@ body {
 
 .background-image {
   background-color: rgb(25, 25, 25);
-  background-image: url("/images/pizza-background.png");
+  background-image: url("/images/pizza-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -160,7 +160,7 @@ textarea,
 select {
   background-color: white;
   color: black;
-  padding: 5px 8px 5px 8px;
+  padding: 0.35rem 0.7rem;
   border-radius: 15px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }

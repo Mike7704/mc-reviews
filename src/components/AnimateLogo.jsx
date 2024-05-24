@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-export default function RotateIn({ children }) {
+export default function AnimateLogo({ children }) {
   const [rotation, setRotation] = useState(0);
 
   useEffect(() => {

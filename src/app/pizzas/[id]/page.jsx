@@ -1,6 +1,6 @@
 import { revalidatePath } from "next/cache";
 import Image from "next/image";
-import AnimateIn from "@/components/AnimateIn";
+import AnimatePage from "@/components/AnimatePage";
 import { notFound } from "next/navigation";
 import { getImage } from "@/api/cloudinary";
 import { fetchPizzas } from "@/utils/utils";
@@ -20,7 +20,7 @@ export default async function Pizza({ params }) {
   const pizzaImageSrc = await getImage(pizza.image_url);
 
   return (
-    <AnimateIn>
+    <AnimatePage>
       <div className="content-container top-padding">
         <h2 className={pizzaStyle.name}>{pizza.name}</h2>
         <div className={`text-backdrop ${pizzaStyle.text_container}`}>
@@ -44,6 +44,6 @@ export default async function Pizza({ params }) {
         </div>
         {pizza.id !== 26 && pizza.id !== 76 ? <EditPizza pizza={pizza} /> : <button>Can&apos;t Edit, Sorry 😉</button>}
       </div>
-    </AnimateIn>
+    </AnimatePage>
   );
 }

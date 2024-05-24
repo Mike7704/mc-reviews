@@ -1,10 +1,10 @@
 import Image from "next/image";
-import AnimateIn from "@/components/AnimateIn";
+import AnimatePage from "@/components/AnimatePage";
 import menuStyle from "@/styles/menu.module.css";
 
 export default function Menu() {
   return (
-    <AnimateIn>
+    <AnimatePage>
       <div className="content-container top-padding">
         <h2 className="subheading">Menu</h2>
         <div>
@@ -35,6 +35,6 @@ export default function Menu() {
           alt={`Pedros image`}
         />
       </div>
-    </AnimateIn>
+    </AnimatePage>
   );
 }

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import UpdatePizzaForm from "@/components/UpdatePizzaForm";
 import DeleteButton from "@/components/DeleteButton";
 
@@ -9,6 +9,16 @@ export default function EditPizza({ pizza }) {
   const hideForm = () => {
     setShowForm(false);
   };
+
+  useEffect(() => {
+    // Scroll the page down when the form is opened
+    if (showForm) {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth",
+      });
+    }
+  }, [showForm]);
 
   return (
     <>

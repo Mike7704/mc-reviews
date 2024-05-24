@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function AnimateIn({ children }) {
+export default function AnimatePage({ children }) {
   return (
     <motion.div
       className="animation"
