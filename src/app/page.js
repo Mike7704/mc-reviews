@@ -17,14 +17,14 @@ export default async function Home() {
         <div className="text-backdrop">
           <div className="container-overlay" />
           <p>
-            Here at MC Reviews, we believe that pizza is more than just a meal - it&apos;s an experience. At Crazy
-            Pedros, we&apos;re all about crafting unforgettable experiences with every slice. From timeless classics to
-            bold creations and monthly specials, there&apos;s something to delight everyone&apos;s taste buds.
+            Here at MC Reviews, we believe that pizza is more than just a meal - it&apos;s an experience. Crazy Pedros
+            is about crafting these unforgettable experiences with every slice. From timeless classics to bold creations
+            and monthly specials, there&apos;s something to delight everyone&apos;s taste buds.
           </p>
           <br />
           <p>
             Join us as we guide you through the world of Crazy Pedros, helping you discover the perfect pizza for every
-            occasion. Let&apos;s embark on this delicious journey together!
+            occasion. Let&apos;s embark on this delicious journey together and get your next order right!
           </p>
         </div>
       </div>
