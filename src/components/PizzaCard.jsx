@@ -9,6 +9,7 @@ export default async function PizzaCard({ pizza }) {
 
   return (
     <Link className={pizzaCardStyle.card_container} href={`/pizzas/${pizza.id}`}>
+      <div className="container-overlay" />
       <div className={pizzaCardStyle.image_container}>
         <Image
           className={pizzaCardStyle.image}

@@ -24,6 +24,7 @@ export default async function Pizza({ params }) {
       <div className="content-container top-padding">
         <h2 className={pizzaStyle.name}>{pizza.name}</h2>
         <div className={`text-backdrop ${pizzaStyle.text_container}`}>
+          <div className="container-overlay" />
           <p className={pizzaStyle.rating}>🍕{pizza.rating}</p>
           <div>
             <label>Description</label>

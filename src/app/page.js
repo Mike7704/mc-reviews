@@ -15,6 +15,7 @@ export default async function Home() {
       <div className="content-container top-padding">
         <h2 className="subheading">Welcome Pizza Lover!</h2>
         <div className="text-backdrop">
+          <div className="container-overlay" />
           <p>
             Here at MC Reviews, we believe that pizza is more than just a meal – it&apos;s an experience. That&apos;s
             why we go beyond the taste and texture to consider every aspect of the pizza-making process, from the

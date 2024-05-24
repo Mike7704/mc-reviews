@@ -39,7 +39,10 @@ export default function PizzaFact() {
 
   return (
     <>
-      <p className={`text-backdrop ${homeStyle.fact_text}`}>{currentFact}</p>
+      <div className={`text-backdrop ${homeStyle.fact_text}`}>
+        <div className="container-overlay" />
+        <p>{currentFact}</p>
+      </div>
       <button onClick={getRandomFact}>New Fact</button>
     </>
   );

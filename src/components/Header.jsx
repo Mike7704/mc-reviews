@@ -7,7 +7,7 @@ export default function Header() {
       <div className="background-image" />
       <RotateIn>
         <div className="pedros-logo-container">
-          <Image src={"/images/pedros-logo.png"} width={156} height={156} alt={`Home`} />
+          <Image src={"/images/pedros-logo.png"} width={156} height={156} alt={`Home`} priority />
         </div>
       </RotateIn>
       <h1>MC Reviews</h1>

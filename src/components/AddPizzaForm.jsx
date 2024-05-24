@@ -1,25 +1,21 @@
+"use client";
+import { useRef } from "react";
 import FormSubmitButton from "@/components/FormSubmitButton";
 import { addPizza } from "@/utils/utils";
-import { uploadImage } from "@/api/cloudinary";
 import formStyle from "@/styles/form.module.css";
 
-export default function PizzaForm() {
-  async function handleAddPizza(formData) {
-    "use server";
-    // Get pizza data from form
-    const name = formData.get("name");
-    const description = formData.get("description");
-    const toppings = formData.get("toppings");
-    const rating = formData.get("rating");
-    // Upload image to cloudinary and store image url
-    const imageUrl = await uploadImage(formData.get("image"));
-    // Add pizza to database
-    await addPizza(name, description, toppings, rating, imageUrl);
+export default function AddPizzaForm() {
+  const formRef = useRef(null);
+
+  async function handleSubmit(formData) {
+    await addPizza(formData);
+    formRef.current.reset();
   }
 
   return (
-    <form className={formStyle.form_container} action={handleAddPizza}>
+    <form className={formStyle.form_container} ref={formRef} action={handleSubmit}>
       <div className={formStyle.input_container}>
+        <div className="container-overlay" />
         <label htmlFor="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Enter name here" required></input>
 
