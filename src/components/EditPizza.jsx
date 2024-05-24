@@ -13,8 +13,9 @@ export default function EditPizza({ pizza }) {
   useEffect(() => {
     // Scroll the page down when the form is opened
     if (showForm) {
+      const targetPosition = document.body.scrollHeight - window.innerHeight - 160;
       window.scrollTo({
-        top: document.body.scrollHeight,
+        top: targetPosition,
         behavior: "smooth",
       });
     }
