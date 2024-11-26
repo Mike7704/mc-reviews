@@ -32,9 +32,9 @@ export default function UpdatePizzaForm({ pizza, hideForm }) {
           name="rating"
           step="0.1"
           min="1"
-          max="5"
+          max="10"
           defaultValue={pizza.rating}
-          placeholder="Enter 1-5 rating here"
+          placeholder="Enter 1-10 rating here"
           required
         ></input>
 

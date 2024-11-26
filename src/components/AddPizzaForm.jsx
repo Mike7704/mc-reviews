@@ -26,8 +26,8 @@ export default function AddPizzaForm() {
           name="rating"
           step="0.1"
           min="1"
-          max="5"
-          placeholder="Enter 1-5 rating here"
+          max="10"
+          placeholder="Enter 1-10 rating here"
           required
         ></input>
 
