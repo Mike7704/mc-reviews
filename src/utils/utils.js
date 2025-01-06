@@ -35,6 +35,7 @@ export async function addPizza(formData) {
       (name, description, toppings, rating, image_url)
       VALUES (${name}, ${description}, ${toppings}, ${rating}, ${imageID}
     )`;
+    revalidatePath(`/`);
     revalidatePath(`/pizzas`);
   } catch (error) {
     throw new Error("Could not add pizza");
@@ -79,6 +80,7 @@ export async function updatePizza(formData) {
       `;
     }
 
+    revalidatePath(`/`);
     revalidatePath(`/pizzas/${pizzaID}`);
   } catch (error) {
     throw new Error("Could not update pizza");

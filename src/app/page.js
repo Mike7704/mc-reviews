@@ -4,11 +4,15 @@ import PizzaFact from "@/components/PizzaFact";
 import PizzaCard from "@/components/PizzaCard";
 import Instagram from "@/components/Instagram";
 import { fetchPizzas } from "@/utils/utils";
+import { revalidatePath } from "next/cache";
 import homeStyle from "@/styles/home.module.css";
 
 export default async function Home() {
   // Fetch all pizzas from database
   const pizzas = await fetchPizzas();
+
+  // Make sure recent data is displayed on page load
+  revalidatePath(`/`);
 
   return (
     <AnimatePage>

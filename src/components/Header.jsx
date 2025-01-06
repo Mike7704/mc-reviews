@@ -18,7 +18,7 @@ export default function Header() {
         </div>
       </AnimateLogo>
       <h1>MC Reviews</h1>
-      <h3>The only pizza reviews you can trust</h3>
+      <h3 className="header-text">The only pizza reviews you can trust</h3>
     </div>
   );
 }
